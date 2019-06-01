@@ -1,0 +1,103 @@
+<style>
+body {
+    /* background-color: azure; */
+}
+.total{
+    font-family: 'East Sea Dokdo', cursive;
+    text-align: center;
+    font-size: 70px;
+    margin-top:40px;
+    color: #122A0A;
+}
+.one{
+    font-family: 'East Sea Dokdo', cursive;
+    text-align: center;
+    font-size: 50px;
+    color:black;
+    text-decoration: underline;
+    background-color: azure;
+}
+.one1{
+    font-family: 'East Sea Dokdo', cursive;
+    text-align: center;
+    font-size: 50px;
+    color:darkgreen;
+    
+    /* text-decoration: underline; */
+}
+
+.two{
+    font-family: 'East Sea Dokdo', cursive;
+    text-align: center;
+    font-size: 50px;
+    color:black;
+    text-decoration: underline;
+    background-color: azure;
+}
+
+.three{
+    font-family: 'East Sea Dokdo', cursive;
+    text-align: center;
+    font-size: 50px;
+    color:darkgreen;
+    /* text-decoration: underline; */
+}
+.count{
+    font-size:40px;
+    font-family: 'Yeon Sung', cursive;
+    /* text-decoration: italic; */
+    color:#122A0A;
+    text-align: center;
+}
+a.count:hover{
+    font-size:40px;
+    font-family: 'Yeon Sung', cursive;
+    text-decoration: none;
+    color: #4B610B;
+    text-align: center;
+}
+</style>
+<head>
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    -->
+        <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap&subset=korean" rel="stylesheet">
+</head>
+<body>
+    <div class="total">입력한 글자 수는 <!--총 단어 수--> {{total}} 단어입니다.</div>
+<link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo&amp;subset=korean" rel="stylesheet">
+
+
+<br>
+<div class="one">
+        <p>입력한 텍스트<br></p>
+</div>
+<div class="one1">
+        <p>{{full}}</p>
+</div>
+<div style="position:absolute;  top:200px; left:70;">
+<img src="https://cdn.crowdpic.net/detail-thumb/thumb_d_F8D81105E76EA7A44E1982B9C342B477.jpg" width="400" height="300">
+</div>
+<!-- <h2> 입력한 텍스트 </h2> -->
+<!-- 입력받은 전체 텍스트 -->
+<!-- {{full}} -->
+
+<div class="two">
+        <p>단어 카운트<br>
+</div>
+<div class="three">
+        <p>{% for word, howmany in dictionary%}
+
+                {{word}} : {{howmany}}
+                <br>
+                {%endfor%}</p>
+</div>
+
+<br>
+<div class="count"><a class="count" href = "{% url 'home' %}">(글자수 한 번 더 세기)</a></div>
+
+<!-- <h2> 단어 카운트 : </h2> -->
+<!-- '단어' - '단어가 나온 횟수' -->
+<!-- {% for word, howmany in dictionary%}
+
+{{word}} : {{howmany}}
+<br>
+{%endfor%} -->

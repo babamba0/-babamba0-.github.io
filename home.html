@@ -1,0 +1,146 @@
+<style>
+
+h1{
+    color:cornflowerblue;
+    font-weight: bold;
+    font-family: 'Jua', sans-serif;
+}
+
+h2{
+    font-size: 60px;
+    font-weight: bold;
+    font-family: 'Gugi', cursive;
+    text-align: center;
+}
+a {
+    font-size: 50px;
+    color: #122A0A;
+    text-decoration: underline;
+    padding: 0%;
+}
+
+.title{
+    font-size: 80px;
+    font-weight: bold;
+    font-family: 'Gugi', cursive;
+    text-align: center;
+}
+.content{
+    font-size: 40px;
+    color:darkslategray;
+    /* font-weight: bold; */
+    font-family: 'Gugi', cursive;
+    letter-spacing: 0.2em; 
+   padding-top: 0.2em;
+   margin-right: 0.5em;
+   margin-left: 0.5em;
+   margin-top: 0.5em;
+   text-align: center;
+   
+}
+
+
+
+.about{
+    font-size:40px;
+    font-family: 'Yeon Sung', cursive;
+    /* text-decoration: italic; */
+    color:#122A0A;
+    text-align: center;
+}
+a.about:hover{
+    font-size:40px;
+    font-family: 'Yeon Sung', cursive;
+    text-decoration: underline;
+    color: #4B610B;
+    text-align: center;
+}
+
+p {
+    font-size: 30px;  
+}
+
+form {
+    padding: 0%;
+    padding-bottom: 14%;
+}
+
+.logo{
+    font-size: 50px;  
+    font-family: 'East Sea Dokdo', cursive;
+    color: #122A0A;
+}
+
+.navbar-nav{
+    font-family: 'East Sea Dokdo', cursive;
+}
+
+.nav-link{
+    font-size:25px;
+    font-family: 'Yeon Sung', cursive;
+}
+.box{
+    margin: 10 400 auto; 
+    width:250px;
+}
+
+.btn-outline-success{
+    font-size:30px;
+    font-family: 'Yeon Sung', cursive;
+}
+
+</style>
+
+
+<head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">   
+        <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap&subset=korean" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo&amp;subset=korean" rel="stylesheet">
+        
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="logo">나랏말싸미</a>
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'about' %}">나랏말싸미란?</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href=>글자수세기</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+</head>
+
+<!-- <h1>글자수세기 웹페이지 ver.1</h1> -->
+
+    <body>
+            <div class="title">나랏말싸미
+                   
+            </div>
+            <link href="https://fonts.googleapis.com/css?family=Gugi&amp;subset=korean" rel="stylesheet">
+            <!-- <img src="https://images.app.goo.gl/28HjJa1R23MNYtkV6"> -->
+            <div class="back"></div>
+            <p class="content">글자나 한 번 입력하고 가시죠 </p>
+            
+            <!-- <link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo&amp;subset=korean" rel="stylesheet"> -->
+    </body>
+    <div class="image" align="center">
+    <img src="https://pbs.twimg.com/media/CmYmWx9UEAEZsfp.jpg" width="500" height="300">
+    </div>
+    
+<br><br>
+
+<div class="about"><a class="about" href="{% url 'about' %}">{나랏말싸미란?}</a></div>
+
+
+<form action="{%url 'result'%}" class="box"><br>
+    
+    <textarea cols="80" rows="10" name="fulltext"></textarea>
+    <br>
+    <button type="submit" class="btn btn-outline-success">몇 글자니?</button>
+</form>
